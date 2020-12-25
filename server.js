@@ -3,6 +3,8 @@ const path = require("path");
 require("dotenv").config();
 const express = require("express");
 const fileupload = require("express-fileupload");
+let morgan;
+if (process.env.NODE_ENV === "development") morgan = require("morgan");
 const morgan = require("morgan");
 const colors = require("colors");
 const cookieParser = require("cookie-parser");
